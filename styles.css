@@ -1,15 +1,17 @@
 body {
-    font-family: 'Your Cyberpunk Font', sans-serif;
+    font-family: 'Cyberpunk', Arial, sans-serif; /* Убедись, что шрифт подключен */
     margin: 0;
     padding: 0;
-    background-color: #1e1e2f; /* Темный фон */
+    background-color: #1A1A2E; /* Темный фон для стиля Cyberpunk */
+    color: #EAEAEA; /* Светлый текст для контраста */
 }
 
 header {
-    background-color: #4B0082; /* Фиолетовый */
+    background-color: #4E1A6C; /* Фиолетовый цвет */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавление теней */
 }
 
 nav ul {
@@ -23,42 +25,59 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFD700; /* Золотистый */
+    color: #EAEAEA;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s; /* Анимация при наведении */
 }
 
-button {
-    background-color: #FFD700; /* Золотистый */
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+nav ul li a:hover {
+    color: #00ffcc; /* Яркий цвет при наведении */
 }
 
-button:hover {
-    background-color: #FF4500; /* Оранжевый при наведении */
+main {
+    padding: 20px;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #4B0082; /* Фиолетовый */
+    background-color: #4E1A6C; /* Фиолетовый цвет */
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-/* Анимации */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+#registration {
+    margin: 20px 0;
+    background-color: rgba(78, 26, 108, 0.8); /* Полупрозрачный фон */
+    padding: 15px;
+    border-radius: 10px; /* Закругленные углы */
 }
 
-h1, h2, h3 {
-    animation: fadeIn 1s ease-in;
+#registration input {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    border: none; /* Убираем рамки */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+#registration button {
+    padding: 10px 15px;
+    background-color: #00ffcc; /* Яркая кнопка */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Анимация */
+}
+
+#registration button:hover {
+    background-color: #4E1A6C; /* Изменение цвета при наведении */
+}
+
+h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для заголовков */
 }
 
 
