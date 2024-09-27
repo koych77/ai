@@ -61,8 +61,8 @@ document.getElementById('home').addEventListener('click', function() {
 document.getElementById('tasks').addEventListener('click', function() {
     let tasksHtml = '<h2>Викторина</h2>';
     quizzesData.forEach((quiz, index) => {
-        tasksHtml += `<h3>Вопрос ${index + 1}: ${quiz.question}</h3>`;
-        tasksHtml += `<ul>`;
+       tasksHtml += `<h3>Вопрос ${index + 1}: ${quiz.question}</h3>`;
+tasksHtml += `<ul>`;
         quiz.answers.forEach((answer, i) => {
             tasksHtml += `<li><button onclick="checkAnswer(${index}, ${i}, this)">${answer}</button></li>`;
         });
