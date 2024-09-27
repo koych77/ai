@@ -86,7 +86,20 @@ function checkAnswer(quizIndex, answerIndex, button) {
         buttons[correctAnswerIndex].style.backgroundColor = "lightgreen"; // Подсветка правильного ответа
         alert('Неправильно! Правильный ответ: ' + quizzesData[quizIndex].answers[correctAnswerIndex]);
     }
-
-    // Обновление количества очков
-    console.log(`Ваши очки: ${userPoints}`);
 }
+
+// Добавление пункта с личным кабинетом
+document.getElementById('profile').addEventListener('click', function() {
+    document.getElementById('content').innerHTML = `
+        <h2>Личный кабинет</h2>
+        <p>Имя: ${userName}</p>
+        <p>Возраст: ${userAge}</p>
+        <p>Очки: ${userPoints}</p>
+        <button id="backBtn">Назад</button>
+    `;
+    document.getElementById('backBtn').addEventListener('click', function() {
+        document.getElementById('content').innerHTML = '<h2>Добро пожаловать в AI Coda Kids!</h2><p>Здесь вы можете узнать о заданиях.</p>';
+    });
+});
+
+
