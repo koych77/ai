@@ -8,26 +8,6 @@ let userPoints = 0;
 let userName = "";
 let userAge = 0;
 
-// Обработчик для регистрации пользователя
-document.getElementById('registerBtn').addEventListener('click', function() {
-    userName = document.getElementById('userName').value;
-    userAge = document.getElementById('userAge').value;
-
-    if (userName && userAge) {
-        document.getElementById('content').innerHTML = `<h2>Добро пожаловать, ${userName}!</h2><p>Ваш возраст: ${userAge}</p>`;
-        tg.MainButton.text = "Начать викторину"; // Пример текста для кнопки
-        tg.MainButton.show(); // Показать кнопку
-    } else {
-        alert("Пожалуйста, введите свое имя и возраст.");
-    }
-});
-
-// Остальная логика вашего приложения
-
-let userPoints = 0;
-let userName = "";
-let userAge = 0;
-
 // Данные о викторинах для детей
 const quizzesData = [
     { question: "Что делает компьютер?", answers: ["Читает книги", "Выполняет команды", "Спит"], correct: 1 },
@@ -62,6 +42,7 @@ const quizzesData = [
     { question: "Что нужно роботу, чтобы двигаться?", answers: ["Электричество", "Еда", "Книга"], correct: 0 }
 ];
 
+
 // Обработчик для регистрации пользователя
 document.getElementById('registerBtn').addEventListener('click', function() {
     userName = document.getElementById('userName').value;
@@ -69,6 +50,8 @@ document.getElementById('registerBtn').addEventListener('click', function() {
 
     if (userName && userAge) {
         document.getElementById('content').innerHTML = `<h2>Добро пожаловать, ${userName}!</h2><p>Ваш возраст: ${userAge}</p>`;
+        tg.MainButton.text = "Начать викторину"; // Пример текста для кнопки
+        tg.MainButton.show(); // Показать кнопку
     } else {
         alert("Пожалуйста, введите свое имя и возраст.");
     }
@@ -127,4 +110,3 @@ document.getElementById('profile').addEventListener('click', function() {
         document.getElementById('content').innerHTML = '<h2>Добро пожаловать в AI Coda Kids!</h2><p>Здесь вы можете узнать о заданиях.</p>';
     });
 });
-
