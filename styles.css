@@ -98,4 +98,13 @@ h2, h3 {
 #registration button:active {
     transform: scale(0.95); /* Подпрыгивание кнопки при нажатии */
 }
+#content {
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.5s; /* Плавный переход для прозрачности */
+}
+
+.show {
+    opacity: 1; /* Полная непрозрачность при отображении */
+}
+
 
