@@ -91,3 +91,11 @@ h2, h3 {
     padding: 10px;
     width: 200px;
 }
+#registration button {
+    transition: background-color 0.3s, transform 0.1s; /* Анимация изменения цвета и трансформации */
+}
+
+#registration button:active {
+    transform: scale(0.95); /* Подпрыгивание кнопки при нажатии */
+}
+
