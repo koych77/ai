@@ -42,7 +42,9 @@ document.getElementById('registerBtn').addEventListener('click', function() {
     userAge = document.getElementById('userAge').value;
 
     if (userName && userAge) {
-        document.getElementById('content').innerHTML = `<h2>Добро пожаловать, ${userName}!</h2><p>Ваш возраст: ${userAge}</p>`;
+        const content = document.getElementById('content');
+        content.innerHTML = `<h2>Добро пожаловать, ${userName}!</h2><p>Ваш возраст: ${userAge}</p>`;
+        content.classList.add('show'); // Добавляем класс для плавного появления
     } else {
         alert("Пожалуйста, введите свое имя и возраст.");
     }
@@ -50,19 +52,26 @@ document.getElementById('registerBtn').addEventListener('click', function() {
 
 // Обработчик для главной страницы
 document.getElementById('home').addEventListener('click', function() {
-    document.getElementById('content').innerHTML = '<h2>Добро пожаловать в AI Coda Kids!</h2><p>Здесь вы можете узнать о заданиях.</p>';
+    const content = document.getElementById('content');
+    content.innerHTML = '<h2>Добро пожаловать в AI Coda Kids!</h2><p>Здесь вы можете узнать о заданиях.</p>';
+    content.classList.add('show'); // Добавляем класс для плавного появления
 });
 
 // Обработчик для раздела заданий
 document.getElementById('tasks').addEventListener('click', function() {
     let tasksHtml = '<h2>Викторина</h2>';
     quizzesData.forEach((quiz, index) => {
-        tasksHtml += `<h3>Вопрос ${index + 1}: ${quiz.question}</h3><ul>`;
+        tasksHtml += `<h3>Вопрос ${index + 1}: ${quiz.question}</h3>`;
+        tasksHtml += `<ul>`;
         quiz.answers.forEach((answer, i) => {
             tasksHtml += `<li><button onclick="checkAnswer(${index}, ${i}, this)">${answer}</button></li>`;
         });
-        tasksHtml += '</ul>';
+        tasksHtml += `</ul>`;
     });
+    const content = document.getElementById('content');
+    content.innerHTML = tasksHtml;
+    content.classList.add('show'); // Добавляем класс для плавного появления
+});
     document.getElementById('content').innerHTML = tasksHtml;
 });
 
