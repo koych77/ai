@@ -79,6 +79,11 @@ footer {
 h2, h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для заголовков */
 }
+.nav-icon {
+    width: 20px; /* Размер иконки */
+    vertical-align: middle; /* Центрирование по вертикали */
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}
 
 
 #registration input {
