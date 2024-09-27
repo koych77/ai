@@ -1,3 +1,29 @@
+// Инициализация Telegram Web Apps
+const tg = window.Telegram.WebApp;
+tg.ready();
+
+// Получаем данные о пользователе
+const userId = tg.initDataUnsafe.user.id;
+let userPoints = 0;
+let userName = "";
+let userAge = 0;
+
+// Обработчик для регистрации пользователя
+document.getElementById('registerBtn').addEventListener('click', function() {
+    userName = document.getElementById('userName').value;
+    userAge = document.getElementById('userAge').value;
+
+    if (userName && userAge) {
+        document.getElementById('content').innerHTML = `<h2>Добро пожаловать, ${userName}!</h2><p>Ваш возраст: ${userAge}</p>`;
+        tg.MainButton.text = "Начать викторину"; // Пример текста для кнопки
+        tg.MainButton.show(); // Показать кнопку
+    } else {
+        alert("Пожалуйста, введите свое имя и возраст.");
+    }
+});
+
+// Остальная логика вашего приложения
+
 let userPoints = 0;
 let userName = "";
 let userAge = 0;
