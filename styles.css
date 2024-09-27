@@ -1,14 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Your Cyberpunk Font', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #1e1e2f; /* Темный фон */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4B0082; /* Фиолетовый */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -23,27 +23,44 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #FFD700; /* Золотистый */
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 20px;
+button {
+    background-color: #FFD700; /* Золотистый */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500; /* Оранжевый при наведении */
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #4CAF50;
+    background-color: #4B0082; /* Фиолетовый */
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-#registration {
-    margin: 20px 0;
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+
+h1, h2, h3 {
+    animation: fadeIn 1s ease-in;
+}
+
 
 #registration input {
     margin: 5px;
